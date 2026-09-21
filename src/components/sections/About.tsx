@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Terminal } from 'lucide-react';
 
 export default function About() {
   return (
