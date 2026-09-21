@@ -78,7 +78,7 @@ export default function Hero() {
             </Link>
 
             <a
-              href="/Kiran_Resume.pdf"
+              href="/Lambaday_Sukanya__Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative flex items-center justify-center gap-2 border border-[var(--accent-red)]/40 bg-white/60 backdrop-blur-sm text-[var(--text)] px-8 py-4 rounded-full font-bold uppercase tracking-wider overflow-hidden transition-transform hover:scale-105 active:scale-95 hover:bg-white/80 shadow-[0_4px_20px_rgba(179,157,219,0.15)]"

@@ -36,37 +36,22 @@ export default function About() {
             </p>
           </motion.div>
 
-          {/* Bio Terminal Window */}
+          {/* Minimalist Bio Card */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="lg:col-span-7 border border-[var(--accent-red)]/50 bg-white/70 backdrop-blur-xl rounded-lg overflow-hidden shadow-[0_10px_40px_rgba(179,157,219,0.3)]"
+            className="lg:col-span-7 bg-white/50 backdrop-blur-md border border-[var(--accent-red)]/30 rounded-2xl p-8 md:p-10 shadow-[0_10px_40px_rgba(179,157,219,0.15)] hover:shadow-[0_10px_50px_rgba(124,92,214,0.25)] hover:border-[var(--bright-red)] transition-all duration-500"
           >
-            <div className="bg-[var(--surface)]/80 border-b border-[var(--accent-red)]/30 px-4 py-3 flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-red-400" />
-              <div className="w-3 h-3 rounded-full bg-yellow-400" />
-              <div className="w-3 h-3 rounded-full bg-green-400" />
-              <div className="ml-4 flex items-center gap-2 text-xs font-[var(--font-jetbrains-mono)] text-[var(--bright-red)]">
-                <Terminal size={14} />
-                <span>sukanya@root:~/about</span>
-              </div>
-            </div>
-            <div className="p-6 md:p-8 font-[var(--font-jetbrains-mono)] text-sm md:text-base text-[var(--text)] leading-relaxed">
-              <p className="mb-4">
-                <span className="text-[var(--bright-red)]">&gt;</span> Initialize bio protocol...
-              </p>
-              <p className="mb-4 text-[var(--text)] font-semibold">
-                Hi, I&apos;m Sukanya Lambaday, a Full-Stack AI Engineer specializing in Generative AI, LLMs, RAG, NLP, and multi-agent systems.
-              </p>
-              <p className="mb-4">
-                Experienced in engineering end-to-end AI applications across the AI, backend, and frontend stack using Python, FastAPI, React, LangChain, vector databases, and LLM platforms.
-              </p>
-              <p className="mb-4">
-                Skilled in RAG pipelines, semantic search, AI agents, intelligent automation, and real-time enterprise solutions.
+            <div className="space-y-6 text-[var(--text)] opacity-90 leading-relaxed text-base md:text-lg">
+              <p>
+                Hello! I&apos;m <span className="font-bold text-[var(--bright-red)]">Sukanya Lambaday</span>, and I specialize in turning complex AI models into scalable, production-ready applications. My expertise spans across Generative AI, LLMs, RAG architectures, and NLP.
               </p>
               <p>
-                <span className="text-[var(--bright-red)] animate-pulse">_</span>
+                I have hands-on experience engineering end-to-end applications across the entire stack. From building multi-agent workflows using <span className="font-semibold text-[var(--accent-red)]">LangChain</span> and <span className="font-semibold text-[var(--accent-red)]">CrewAI</span> to developing high-performance backends with <span className="font-semibold text-[var(--accent-red)]">FastAPI</span> and vector databases, I thrive on solving hard engineering problems.
+              </p>
+              <p>
+                Whether it&apos;s intelligent automation, semantic search, or real-time enterprise AI solutions, I am driven by a passion to build systems that are not only intelligent, but also robust and intuitive.
               </p>
             </div>
           </motion.div>

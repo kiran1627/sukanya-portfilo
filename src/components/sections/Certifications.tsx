@@ -81,7 +81,7 @@ export default function Certifications() {
     return () => {
       if (animationRef.current) cancelAnimationFrame(animationRef.current);
     };
-  }, [isDragging, autoSpin]);
+  }, [isDragging, autoSpin, isHovered]);
 
   const handlePointerDown = (e: React.PointerEvent) => {
     setIsDragging(true);
