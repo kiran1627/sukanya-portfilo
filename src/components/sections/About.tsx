@@ -16,14 +16,32 @@ export default function About() {
           <div className="h-px w-full max-w-sm bg-gradient-to-r from-[var(--accent-red)] to-transparent mt-4" />
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          {/* Bio Typography */}
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="lg:col-span-5"
+          >
+            <h3 className="text-3xl md:text-5xl font-bold font-[var(--font-syne)] text-[var(--text)] mb-6 leading-tight">
+              Bridging the gap between <span className="text-[var(--bright-red)]">AI Models</span> and <span className="text-[var(--bright-red)]">Production</span>.
+            </h3>
+            <p className="text-[var(--text)] opacity-70 mb-6 font-[var(--font-jetbrains-mono)] leading-relaxed">
+              I am a Full-Stack AI Engineer specializing in Generative AI, LLMs, RAG, NLP, and multi-agent systems.
+            </p>
+            <p className="text-[var(--text)] opacity-70 font-[var(--font-jetbrains-mono)] leading-relaxed">
+              With experience in engineering end-to-end AI applications, I build robust pipelines across the backend, frontend, and AI stack to deliver real-time enterprise solutions.
+            </p>
+          </motion.div>
 
           {/* Bio Terminal Window */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="border border-[var(--accent-red)]/50 bg-white/70 backdrop-blur-xl rounded-lg overflow-hidden shadow-[0_10px_40px_rgba(179,157,219,0.3)]"
+            className="lg:col-span-7 border border-[var(--accent-red)]/50 bg-white/70 backdrop-blur-xl rounded-lg overflow-hidden shadow-[0_10px_40px_rgba(179,157,219,0.3)]"
           >
             <div className="bg-[var(--surface)]/80 border-b border-[var(--accent-red)]/30 px-4 py-3 flex items-center gap-2">
               <div className="w-3 h-3 rounded-full bg-red-400" />

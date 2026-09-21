@@ -46,6 +46,7 @@ export default function Certifications() {
   const [isDragging, setIsDragging] = useState(false);
   const [selectedCert, setSelectedCert] = useState<typeof certsData[0] | null>(null);
   const [autoSpin, setAutoSpin] = useState(true);
+  const [isHovered, setIsHovered] = useState(false);
   
   const radius = typeof window !== 'undefined' ? (window.innerWidth < 768 ? 275 : window.innerWidth < 1024 ? 380 : 480) : 480;
   const N = certsData.length;
@@ -64,7 +65,7 @@ export default function Certifications() {
       lastTime = time;
 
       if (!isDragging) {
-        if (autoSpin) {
+        if (autoSpin && !isHovered) {
           setRotation(r => r - 0.06 * dt);
         } else if (Math.abs(velocity.current) > 0.01) {
           // Inertia
@@ -162,6 +163,8 @@ export default function Certifications() {
           onPointerMove={handlePointerMove}
           onPointerUp={handlePointerUp}
           onPointerCancel={handlePointerUp}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
         >
           {/* Cylinder Wrapper */}
           <div 
