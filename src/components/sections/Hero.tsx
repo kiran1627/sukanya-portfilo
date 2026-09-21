@@ -30,7 +30,7 @@ export default function Hero() {
           {/* Eyebrow Badge */}
           <div className="inline-block border border-[var(--accent-red)]/30 bg-white/70 backdrop-blur-md px-4 py-1.5 rounded-full mb-6 shadow-[0_4px_20px_rgba(179,157,219,0.2)]">
             <span className="text-xs font-medium tracking-[0.2em] text-[var(--bright-red)] font-[var(--font-jetbrains-mono)] uppercase">
-              01 / AI ENGINEER & FULL-STACK
+              AI ENGINEER & FULL-STACK
             </span>
           </div>
 

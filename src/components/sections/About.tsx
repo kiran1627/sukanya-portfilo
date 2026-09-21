@@ -16,7 +16,7 @@ export default function About() {
           <div className="h-px w-full max-w-sm bg-gradient-to-r from-[var(--accent-red)] to-transparent mt-4" />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="max-w-4xl mx-auto">
 
           {/* Bio Terminal Window */}
           <motion.div
@@ -53,44 +53,7 @@ export default function About() {
             </div>
           </motion.div>
 
-          {/* Core Strengths Matrix */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="flex flex-col gap-6"
-          >
-            {[
-              { title: 'Generative AI & Agentic Systems', desc: 'Designing RAG pipelines and multi-agent workflows using LangChain, LangGraph, and CrewAI.', level: 95 },
-              { title: 'Backend & Infrastructure', desc: 'Developing high-performance microservices with FastAPI and integrating vector databases (pgvector, FAISS, ChromaDB).', level: 90 },
-              { title: 'Full-Stack Development', desc: 'Building responsive React dashboards to interface with AI models and enterprise backends.', level: 85 },
-            ].map((strength, i) => (
-              <div key={i} className="border border-[var(--accent-red)]/30 bg-white/50 backdrop-blur-md p-6 rounded-lg group hover:border-[var(--bright-red)] transition-colors shadow-[0_5px_20px_rgba(179,157,219,0.1)] hover:shadow-[0_5px_25px_rgba(124,92,214,0.25)]">
-                <div className="flex justify-between items-start mb-2">
-                  <h3 className="font-[var(--font-syne)] font-bold text-xl text-[var(--text)] group-hover:text-[var(--bright-red)] transition-colors">
-                    {strength.title}
-                  </h3>
-                  <span className="font-[var(--font-jetbrains-mono)] text-sm text-[var(--bright-red)] font-bold">
-                    {strength.level}%
-                  </span>
-                </div>
-                <p className="text-[var(--text)] opacity-70 text-sm mb-4">
-                  {strength.desc}
-                </p>
-                {/* Progress Bar */}
-                <div className="w-full h-1 bg-[var(--surface)] rounded-full overflow-hidden border border-[var(--accent-red)]/20">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    whileInView={{ width: `${strength.level}%` }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1, delay: 0.2 + (i * 0.1) }}
-                    className="h-full bg-gradient-to-r from-[var(--accent-red)] to-[var(--bright-red)] shadow-[0_0_10px_var(--accent-red)]"
-                  />
-                </div>
-              </div>
-            ))}
-          </motion.div>
+
 
         </div>
       </div>
