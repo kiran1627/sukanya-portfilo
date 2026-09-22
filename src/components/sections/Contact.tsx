@@ -1,12 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import { Copy, Check, Mail } from 'lucide-react';
+import { Copy, Check, Mail, Phone } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { personal } from '../../data/portfolio';
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);
-  const email = 'sukanyal1627@gmail.com';
+  const email = personal.email;
 
   const handleCopy = async () => {
     try {
@@ -52,11 +53,12 @@ export default function Contact() {
             </span>
           </div>
 
-          <div className="flex justify-center gap-6">
+          <div className="flex justify-center gap-6 flex-wrap">
             {[
-              { icon: FaGithub, href: 'https://github.com/SukanyaLambaday', label: 'GitHub' },
-              { icon: FaLinkedin, href: 'https://www.linkedin.com/in/sukanya-lambaday/', label: 'LinkedIn' },
-              { icon: Mail, href: `mailto:${email}`, label: 'Email' },
+              { icon: FaGithub, href: personal.github, label: 'GitHub' },
+              { icon: FaLinkedin, href: personal.linkedin, label: 'LinkedIn' },
+              { icon: Mail, href: `mailto:${personal.email}`, label: 'Email' },
+              { icon: Phone, href: `tel:${personal.phone}`, label: 'Phone' },
             ].map((social) => (
               <a
                 key={social.label}
